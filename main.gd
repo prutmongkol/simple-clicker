@@ -25,6 +25,8 @@ func _process(delta: float) -> void:
 		elapsed_time -= bot_update_rate
 		money += bot_count
 		
+	hire_boba_bot_button.disabled = money < bot_cost	
+		
 	money_label.text = str(money)
 	bot_count_label.text = str(bot_count) + " bot" if bot_count <= 1 else str(bot_count) + " bots"
 
