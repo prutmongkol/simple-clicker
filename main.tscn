@@ -13,6 +13,7 @@ offset_right = 350.0
 offset_bottom = 250.0
 theme_override_constants/separation = 50
 
+<<<<<<< HEAD
 [node name="MoneyContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
@@ -66,3 +67,25 @@ horizontal_alignment = 2
 layout_mode = 2
 text = "1 drink every 5 seconds"
 horizontal_alignment = 2
+=======
+[node name="Money" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "$ 001"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Make a drink"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "x00"
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hire Boba-bot"
+>>>>>>> f7b2665396318f1c7b609e75992e6b627ccc3787
