@@ -13,23 +13,56 @@ offset_right = 350.0
 offset_bottom = 250.0
 theme_override_constants/separation = 50
 
-[node name="Money" type="Label" parent="VBoxContainer"]
+[node name="MoneyContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MoneySymbol" type="Label" parent="VBoxContainer/MoneyContainer"]
+layout_mode = 2
+text = "$"
+
+[node name="Money" type="Label" parent="VBoxContainer/MoneyContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
-text = "$ 001"
+text = "0
+"
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="MakeADrinkContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MakeADrinkButton" type="Button" parent="VBoxContainer/MakeADrinkContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Make a drink"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="MakeADrinkLabel" type="Label" parent="VBoxContainer/MakeADrinkContainer"]
+layout_mode = 2
+text = "$1 per click"
+horizontal_alignment = 2
+
+[node name="BobaBotContainer" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BobaBotContainer"]
+layout_mode = 2
+
+[node name="BotCountLabel" type="Label" parent="VBoxContainer/BobaBotContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "x00"
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="HireBobaBotButton" type="Button" parent="VBoxContainer/BobaBotContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Hire Boba-bot"
+
+[node name="BotCostLabel" type="Label" parent="VBoxContainer/BobaBotContainer"]
+layout_mode = 2
+text = "$10"
+horizontal_alignment = 2
+
+[node name="BotLabel" type="Label" parent="VBoxContainer/BobaBotContainer"]
+layout_mode = 2
+text = "1 drink every 5 seconds"
+horizontal_alignment = 2
