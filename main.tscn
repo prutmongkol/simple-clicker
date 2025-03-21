@@ -35,7 +35,7 @@ layout_mode = 2
 [node name="MakeADrinkButton" type="Button" parent="VBoxContainer/MakeADrinkContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Make a drink"
+text = "Make a cup of tasty boba tea"
 
 [node name="MakeADrinkLabel" type="Label" parent="VBoxContainer/MakeADrinkContainer"]
 layout_mode = 2
@@ -51,15 +51,16 @@ layout_mode = 2
 [node name="BotCountLabel" type="Label" parent="VBoxContainer/BobaBotContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "x00"
+text = "0 bot"
 
 [node name="HireBobaBotButton" type="Button" parent="VBoxContainer/BobaBotContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Hire Boba-bot"
+text = "Hire a Boba-bot"
 
 [node name="BotCostLabel" type="Label" parent="VBoxContainer/BobaBotContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "$10"
 horizontal_alignment = 2
@@ -70,3 +71,4 @@ text = "1 drink every 5 seconds"
 horizontal_alignment = 2
 
 [connection signal="button_up" from="VBoxContainer/MakeADrinkContainer/MakeADrinkButton" to="." method="_on_make_a_drink_button_button_up"]
+[connection signal="button_up" from="VBoxContainer/BobaBotContainer/HBoxContainer/HireBobaBotButton" to="." method="_on_hire_boba_bot_button_button_up"]
